@@ -18,7 +18,10 @@ import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//tgl pengerjaan : 28/05/2021
+//Nim : 10118080
+//Nama : Taufiq Rizky
+//Kelas : IF2/S1/VI
 public class Walkthrough extends AppCompatActivity {
     private ViewPager screenPager;
     IntroViewPagerAdapter introViewPagerAdapter ;

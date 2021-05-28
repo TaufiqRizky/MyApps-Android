@@ -23,6 +23,10 @@ import java.util.ArrayList;
  * Use the {@link musicFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+//tgl pengerjaan : 28/05/2021
+//Nim : 10118080
+//Nama : Taufiq Rizky
+//Kelas : IF2/S1/VI
 public class musicFragment extends Fragment {
     private RecyclerView rvMusic;
     private ArrayList<music> list = new ArrayList<>();

@@ -13,6 +13,10 @@ import android.view.ViewGroup;
  * Use the {@link Home#newInstance} factory method to
  * create an instance of this fragment.
  */
+//tgl pengerjaan : 28/05/2021
+//Nim : 10118080
+//Nama : Taufiq Rizky
+//Kelas : IF2/S1/VI
 public class Home extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match

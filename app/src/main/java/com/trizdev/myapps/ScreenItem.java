@@ -1,5 +1,9 @@
 package com.trizdev.myapps;
 
+//tgl pengerjaan : 28/05/2021
+//Nim : 10118080
+//Nama : Taufiq Rizky
+//Kelas : IF2/S1/VI
 public class ScreenItem {
 
     String Title,Description;

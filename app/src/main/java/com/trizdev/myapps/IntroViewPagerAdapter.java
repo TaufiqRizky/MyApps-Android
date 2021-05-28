@@ -12,6 +12,11 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import java.util.List;
 
+//tgl pengerjaan : 28/05/2021
+//Nim : 10118080
+//Nama : Taufiq Rizky
+//Kelas : IF2/S1/VI
+
 public class IntroViewPagerAdapter extends PagerAdapter {
 
    Context mContext ;
