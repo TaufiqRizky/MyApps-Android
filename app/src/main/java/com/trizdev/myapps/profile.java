@@ -12,6 +12,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.trizdev.myapps.Entity.ProfileRoomEntity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +29,7 @@ import android.widget.Button;
 //Nama : Taufiq Rizky
 //Kelas : IF2/S1/VI
 public class profile extends Fragment {
+    public ProfileRoomEntity profile;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -73,6 +80,26 @@ public class profile extends Fragment {
         Button btn_insta = (Button) view.findViewById(R.id.btn_insta);
         Button btn_map = (Button) view.findViewById(R.id.btn_maps);
         Button btn_info = (Button) view.findViewById(R.id.btn_info);
+        TextView nama = view.findViewById(R.id.tv_nama);
+        TextView nim = view.findViewById(R.id.tv_nim);
+        TextView bio = view.findViewById(R.id.tv_bio);
+        TextView gender = view.findViewById(R.id.tv_gender);
+        TextView alamat = view.findViewById(R.id.tv_alamat);
+        TextView goldar = view.findViewById(R.id.tv_goldar);
+        TextView ttl = view.findViewById(R.id.tv_ttl);
+        TextView hp = view.findViewById(R.id.tv_hp);
+        TextView email = view.findViewById(R.id.tv_email);
+
+
+        nama.setText(profile.getNama());
+        nim.setText(profile.getNim());
+        bio.setText(profile.getBio());
+        gender.setText(profile.getJk());
+        alamat.setText(profile.getAlamat());
+        goldar.setText(profile.getGoldar());
+        ttl.setText(profile.getTtl());
+        hp.setText(profile.getTlp());
+        email.setText(profile.getEmail());
         btn_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -105,6 +132,10 @@ public class profile extends Fragment {
                 }
             }
         });
+
+        Fragment fragmentMaps = new MapsFragment();
+        loadFragment(fragmentMaps);
+
         return view;
     }
 
@@ -118,5 +149,9 @@ public class profile extends Fragment {
         // create and show the alert dialog
         AlertDialog dialog = builder.create();
         dialog.show();
+    }
+
+    private void loadFragment(Fragment fragment) {
+        getFragmentManager().beginTransaction().replace(R.id.maps_profile,fragment).commit();
     }
 }

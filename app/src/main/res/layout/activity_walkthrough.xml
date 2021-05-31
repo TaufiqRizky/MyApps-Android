@@ -34,7 +34,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="2"
             >
 
             <TextView
@@ -53,18 +53,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center">
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical">
             <Button
                 android:visibility="invisible"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="#3D5A80"
                 android:id="@+id/btn_get_started"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginRight="20dp"
+
                 android:text="Get Started"
                 android:background="#00000000 "
 
@@ -75,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:background="#00000000"
                 app:tabIndicatorHeight="0dp"
-
+                android:layout_marginTop="-47dp"
                 app:tabBackground="@drawable/indicator_selector">
 
             </com.google.android.material.tabs.TabLayout>
@@ -84,7 +85,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:gravity="right">
             <Button
                 android:textSize="16sp"

@@ -31,6 +31,7 @@ tools:context=".Home">
         android:layout_weight="2"
         android:orientation="vertical">
         <TextView
+            android:id="@+id/tv_nama"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,12 +39,14 @@ tools:context=".Home">
             android:textColor="#fff"
             android:textSize="22sp"/>
         <TextView
+            android:id="@+id/tv_nim"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="10118080"
             android:textColor="#fff"
             android:textSize="20sp"/>
         <TextView
+            android:id="@+id/tv_bio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
@@ -78,17 +81,20 @@ tools:context=".Home">
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
 
                 android:text="Gender"/>
             <TextView
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:text=":"
                 />
             <TextView
+                android:id="@+id/tv_gender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Male"/>
@@ -109,6 +115,7 @@ tools:context=".Home">
                 android:text=":"
                 />
             <TextView
+                android:id="@+id/tv_ttl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bandung, 19/Agustus/2000 "/>
@@ -129,6 +136,7 @@ tools:context=".Home">
                 android:text=":"
                 />
             <TextView
+                android:id="@+id/tv_goldar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="O"/>
@@ -149,6 +157,7 @@ tools:context=".Home">
                 android:text=":"
                 />
             <TextView
+                android:id="@+id/tv_alamat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Jl. Taman Saturnus 1 no.45, Bandung"/>
@@ -169,6 +178,7 @@ tools:context=".Home">
                 android:text=":"
                 />
             <TextView
+                android:id="@+id/tv_hp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+628981980002"/>
@@ -190,32 +200,52 @@ tools:context=".Home">
                 android:text=":"
                 />
             <TextView
+                android:id="@+id/tv_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="taufiq.it2@gmail.com"/>
+
         </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_insta"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_ig"
+            android:drawableStart="@drawable/ic_ins"
+            android:text="Find Me On INSTAGRAM"
+            android:textColor="@color/white"
+            android:paddingLeft="15dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Find Me "
+            android:layout_marginTop="20dp"
+            android:textColor="#192a56"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="17dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_weight="1"
+            android:id="@+id/maps_profile"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp">
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_insta"
-                android:layout_width="135dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_weight="1"
-                android:text="Instagram"
-                android:textSize="12sp"
 
-                android:drawableStart="@drawable/ic_ins"/>
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_maps"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:text="Find Me"
+                android:text="Open With Google maps"
                 android:textSize="12sp"
-
+                android:paddingLeft="15dp"
+                android:background="@drawable/btn_maps"
+                android:textColor="@color/white"
                 android:layout_marginHorizontal="20dp"
                 android:layout_weight="1"
                 android:drawableStart="@drawable/ic_map"/>
@@ -227,6 +257,9 @@ tools:context=".Home">
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="5dp"
+            android:paddingLeft="15dp"
+            android:background="@drawable/btn_about"
+            android:textColor="@color/white"
             android:drawableStart="@drawable/ic_info"
 
             android:text="about Apps"/>

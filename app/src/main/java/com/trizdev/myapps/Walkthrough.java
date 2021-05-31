@@ -69,6 +69,7 @@ public class Walkthrough extends AppCompatActivity {
         mList.add(new ScreenItem("Profile","You can see my bio and find me here",R.drawable.wt1));
         mList.add(new ScreenItem("Gallery","See a gallery full of my moment here",R.drawable.wt2));
         mList.add(new ScreenItem("Activity","You can see my daily Activity and my close friend list in here",R.drawable.wt3));
+        mList.add(new ScreenItem("Music","See my favorite music here",R.drawable.wt4));
 
         // setup viewpager
         screenPager =findViewById(R.id.screen_viewpager);
