@@ -4,8 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.trizdev.myapps.Database.ProfileDatabase;
+import com.trizdev.myapps.Database.profileDAO;
+import com.trizdev.myapps.Entity.ProfileRoomEntity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 //tgl pengerjaan : 28/05/2021
 //Nim : 10118080
@@ -13,11 +20,14 @@ import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 //Kelas : IF2/S1/VI
 
 public class MainActivity extends AppCompatActivity {
+
     MeowBottomNavigation botNav;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         botNav = findViewById(R.id.bottomNav);
 
@@ -47,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 5 :
                         fragment = new profile();
+
                         break;
                 }
                 loadFragment(fragment);

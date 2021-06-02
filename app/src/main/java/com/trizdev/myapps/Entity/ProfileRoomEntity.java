@@ -38,7 +38,19 @@ public class ProfileRoomEntity implements Serializable {
     @ColumnInfo(name = "tlp")
     private String tlp;
 
-    public ProfileRoomEntity(int id, String ttl, String nama, String bio, String alamat, String jk, String goldar, String nim, String email, String tlp) {
+    @ColumnInfo(name = "makes")
+    private String makes;
+
+    @ColumnInfo(name = "mikes")
+    private String mikes;
+
+    @ColumnInfo(name = "cita")
+    private String cita;
+
+    @ColumnInfo(name = "hoby")
+    private String hoby;
+
+    public ProfileRoomEntity(int id, String ttl, String nama, String bio, String alamat, String jk, String goldar, String nim, String email, String tlp,String makes, String mikes,String cita, String hoby) {
         this.id = id;
         this.ttl = ttl;
         this.nama = nama;
@@ -49,6 +61,42 @@ public class ProfileRoomEntity implements Serializable {
         this.nim = nim;
         this.email = email;
         this.tlp = tlp;
+        this.makes = makes;
+        this.mikes = mikes;
+        this.cita = cita;
+        this.hoby = hoby;
+    }
+
+    public String getMakes() {
+        return makes;
+    }
+
+    public void setMakes(String makes) {
+        this.makes = makes;
+    }
+
+    public String getMikes() {
+        return mikes;
+    }
+
+    public void setMikes(String mikes) {
+        this.mikes = mikes;
+    }
+
+    public String getCita() {
+        return cita;
+    }
+
+    public void setCita(String cita) {
+        this.cita = cita;
+    }
+
+    public String getHoby() {
+        return hoby;
+    }
+
+    public void setHoby(String hoby) {
+        this.hoby = hoby;
     }
 
     public String getEmail() {

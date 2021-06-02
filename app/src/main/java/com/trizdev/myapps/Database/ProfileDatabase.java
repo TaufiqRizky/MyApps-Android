@@ -2,8 +2,10 @@ package com.trizdev.myapps.Database;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.room.Database;
 import androidx.room.DatabaseConfiguration;
 import androidx.room.InvalidationTracker;
 import androidx.room.Room;
@@ -13,6 +15,9 @@ import androidx.sqlite.db.SupportSQLiteOpenHelper;
 
 import com.trizdev.myapps.Entity.ProfileRoomEntity;
 
+import static androidx.constraintlayout.widget.Constraints.TAG;
+
+@Database(entities = {ProfileRoomEntity.class}, version = 3, exportSchema = false)
 public abstract class ProfileDatabase extends RoomDatabase {
     private static ProfileDatabase instance;
     public abstract profileDAO profileDAO();
@@ -32,6 +37,7 @@ public abstract class ProfileDatabase extends RoomDatabase {
                     ProfileDatabase.class, "Profile.db")
                     .fallbackToDestructiveMigration()
                     .addCallback(roomCallback)
+                    .allowMainThreadQueries()
                     .build();
         }
         return instance;
@@ -46,7 +52,7 @@ public abstract class ProfileDatabase extends RoomDatabase {
 
         @Override
         protected Void doInBackground(Void... voids) {
-              dao.insert(new ProfileRoomEntity(1, "Bandung, 19 Agustus 2000", "Taufiq Rizky", "Hi my name is Taufiq, im a freelancer fullstack web Developer" ,"Jl. Taman Saturnus 1 no.45, Bandung","Laki-Laki","O","10118080","taufiq.it2@gmail.com","+62 8981980002"));
+              dao.insert(new ProfileRoomEntity(1, "Bandung, 19 Agustus 2000", "Taufiq Rizky", "Hi my name is Taufiq, im a freelancer fullstack web Developer" ,"Jl. Taman Saturnus 1 no.45, Bandung","Laki-Laki","O","10118080","taufiq.it2@gmail.com","+62 8981980002","Rawon","Es Teh Manis","Programmer","Futsal"));
 
 
             return null;

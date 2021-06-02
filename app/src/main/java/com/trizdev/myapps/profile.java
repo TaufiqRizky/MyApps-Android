@@ -1,20 +1,29 @@
 package com.trizdev.myapps;
 
 import android.app.AlertDialog;
+import android.app.Application;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.trizdev.myapps.Database.ProfileDatabase;
 import com.trizdev.myapps.Entity.ProfileRoomEntity;
+import com.trizdev.myapps.Database.profileDAO;
+import com.trizdev.myapps.viewModel.ProfileVM;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +38,9 @@ import java.util.List;
 //Nama : Taufiq Rizky
 //Kelas : IF2/S1/VI
 public class profile extends Fragment {
-    public ProfileRoomEntity profile;
+    private ProfileVM viewModel;
+
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -65,6 +76,8 @@ public class profile extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -75,8 +88,15 @@ public class profile extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
+        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        viewModel = ViewModelProviders.of(getActivity()).get(ProfileVM.class);
+
+
+
+
+
+        //dao.insert(new ProfileRoomEntity(1, "Bandung, 19 Agustus 2000", "Taufiq Rizky", "Hi my name is Taufiq, im a freelancer fullstack web Developer" ,"Jl. Taman Saturnus 1 no.45, Bandung","Laki-Laki","O","10118080","taufiq.it2@gmail.com","+62 8981980002"));
         Button btn_insta = (Button) view.findViewById(R.id.btn_insta);
         Button btn_map = (Button) view.findViewById(R.id.btn_maps);
         Button btn_info = (Button) view.findViewById(R.id.btn_info);
@@ -89,17 +109,21 @@ public class profile extends Fragment {
         TextView ttl = view.findViewById(R.id.tv_ttl);
         TextView hp = view.findViewById(R.id.tv_hp);
         TextView email = view.findViewById(R.id.tv_email);
+        String[] strProfile = new String[5];
 
 
-        nama.setText(profile.getNama());
-        nim.setText(profile.getNim());
-        bio.setText(profile.getBio());
-        gender.setText(profile.getJk());
-        alamat.setText(profile.getAlamat());
-        goldar.setText(profile.getGoldar());
-        ttl.setText(profile.getTtl());
-        hp.setText(profile.getTlp());
-        email.setText(profile.getEmail());
+
+
+
+        nama.setText(viewModel.getProfile().getNama());
+        nim.setText(viewModel.getProfile().getNim());
+        bio.setText(viewModel.getProfile().getBio());
+        gender.setText(viewModel.getProfile().getJk());
+        alamat.setText(viewModel.getProfile().getAlamat());
+        goldar.setText(viewModel.getProfile().getGoldar());
+        ttl.setText(viewModel.getProfile().getTtl());
+        hp.setText(viewModel.getProfile().getTlp());
+        email.setText(viewModel.getProfile().getEmail());
         btn_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -143,7 +167,7 @@ public class profile extends Fragment {
         // setup the alert builder
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("About Apps");
-        builder.setMessage("TrizApp V.0.0.1 BETA");
+        builder.setMessage("TrizApp V.0.1.0 ");
         // add a button
         builder.setPositiveButton("OK", null);
         // create and show the alert dialog

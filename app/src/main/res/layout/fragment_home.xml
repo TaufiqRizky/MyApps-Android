@@ -31,26 +31,26 @@
             android:layout_weight="2"
             android:orientation="vertical">
             <TextView
+                android:id="@+id/tv_nama_home"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Taufiq Rizky"
+
                 android:textColor="#fff"
                 android:textSize="22sp"/>
             <TextView
+                android:id="@+id/tv_nim_home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="10118080"
                 android:textColor="#fff"
                 android:textSize="20sp"/>
             <TextView
+                android:id="@+id/tv_bio_home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:layout_marginTop="20dp"
-                android:textColor="#EBEBEB"
-                android:text="Hi my name is Taufiq, im a freelancer fullstack web Developer"/>
-
+                android:textColor="#EBEBEB"/>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -91,9 +91,9 @@
                     android:textStyle="bold"
                     android:layout_gravity="center"/>
                 <TextView
+                    android:id="@+id/tv_mikes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Es Teh Manis"
                     android:layout_gravity="center"/>
             </LinearLayout>
             <LinearLayout
@@ -117,7 +117,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Rawon"
+                    android:id="@+id/tv_makes"
                     android:layout_gravity="center"/>
             </LinearLayout>
 
@@ -150,7 +150,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Programmer"
+                    android:id="@+id/tv_cita"
                     android:layout_gravity="center"/>
             </LinearLayout>
             <LinearLayout
@@ -173,7 +173,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Futsal"
+                    android:id="@+id/tv_hoby"
                     android:layout_gravity="center"/>
             </LinearLayout>
 

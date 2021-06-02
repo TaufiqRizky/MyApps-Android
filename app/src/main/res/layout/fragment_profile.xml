@@ -35,14 +35,12 @@ tools:context=".Home">
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Taufiq Rizky"
             android:textColor="#fff"
             android:textSize="22sp"/>
         <TextView
             android:id="@+id/tv_nim"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="10118080"
             android:textColor="#fff"
             android:textSize="20sp"/>
         <TextView
@@ -51,9 +49,7 @@ tools:context=".Home">
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_marginTop="20dp"
-            android:textColor="#EBEBEB"
-            android:text="Hi my name is Taufiq, im a freelancer fullstack web Developer"/>
-
+            android:textColor="#EBEBEB"/>
     </LinearLayout>
 </LinearLayout>
 <ScrollView
@@ -72,7 +68,7 @@ tools:context=".Home">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Contact "
+            android:text="About Me "
             android:textColor="#192a56"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -162,6 +158,16 @@ tools:context=".Home">
                 android:layout_height="wrap_content"
                 android:text="Jl. Taman Saturnus 1 no.45, Bandung"/>
         </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact "
+            android:textColor="#192a56"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="17dp"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

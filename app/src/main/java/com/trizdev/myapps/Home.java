@@ -3,10 +3,14 @@ package com.trizdev.myapps;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProviders;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.trizdev.myapps.viewModel.ProfileVM;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,6 +22,7 @@ import android.view.ViewGroup;
 //Nama : Taufiq Rizky
 //Kelas : IF2/S1/VI
 public class Home extends Fragment {
+    private ProfileVM viewModel;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -63,6 +68,26 @@ public class Home extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View  view = inflater.inflate(R.layout.fragment_home, container, false);
+        viewModel = ViewModelProviders.of(getActivity()).get(ProfileVM.class);
+
+        TextView nama = view.findViewById(R.id.tv_nama_home);
+        TextView nim = view.findViewById(R.id.tv_nim_home);
+        TextView bio = view.findViewById(R.id.tv_bio_home);
+        TextView makes = view.findViewById(R.id.tv_makes);
+        TextView mikes = view.findViewById(R.id.tv_mikes);
+        TextView cita = view.findViewById(R.id.tv_cita);
+        TextView hoby = view.findViewById(R.id.tv_hoby);
+
+        nama.setText(viewModel.getProfile().getNama());
+        nim.setText(viewModel.getProfile().getNim());
+        bio.setText(viewModel.getProfile().getBio());
+        makes.setText(viewModel.getProfile().getMakes());
+        mikes.setText(viewModel.getProfile().getMikes());
+        cita.setText(viewModel.getProfile().getCita());
+        hoby.setText(viewModel.getProfile().getHoby());
+
+
+        return view;
     }
 }
